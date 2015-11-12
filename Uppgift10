@@ -32,18 +32,26 @@ namespace Uppgift10
         private void btnGissa_Click(object sender, EventArgs e)
         {
             int gissa = Convert.ToInt32(txtTal1.Text);
+            int gissatal = nummer + 100;
+            int gissatal2 = nummer - 100;
             klick++;
 
             if ((gissa > nummer))
             {
                 MessageBox.Show("Talet är lägre");
             }
-
+            if (gissa > nummer)
+            {
+                MessageBox.Show("Talet är mycket lägre");
+            }
             if (gissa < nummer)
             {
                 MessageBox.Show("Talet är högre");
             }
-
+             if (gissa < nummer)
+            {
+                MessageBox.Show("Talet är mycket högre");
+            }
             if (gissa == nummer)
             {
                 MessageBox.Show("Du gissade rätt!" + " Antal gissningar = " + klick.ToString());
